@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Inventory Dashboard">
+        <template if:true={inventoryData}>
+            <ul>
+                <template for:each={inventoryData} for:item="item">
+                    <li key={item.Id}>{item.Name} - {item.Quantity__c}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>
